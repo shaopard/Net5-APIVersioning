@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc.ApiExplorer;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using Swashbuckle.AspNetCore.SwaggerUI;
 
 namespace SwaggerConfiguration
 {
@@ -30,6 +32,16 @@ namespace SwaggerConfiguration
         public void Configure(string name, SwaggerGenOptions options)
         {
             Configure(options);
+        }
+
+        public static void ConfigureSwaggerUI(SwaggerUIOptions options, IApiVersionDescriptionProvider provider)
+        {
+            foreach (var description in provider.ApiVersionDescriptions)
+            {
+                options.SwaggerEndpoint(
+                    $"/swagger/{description.GroupName}/swagger.json",
+                    description.GroupName.ToUpperInvariant());
+            }
         }
 
         private static OpenApiInfo CreateVersionInfo(
