@@ -5,6 +5,7 @@ using Microsoft.Extensions.Options;
 using SwaggerConfiguration;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -25,7 +26,7 @@ builder.Services.AddApiVersioning(options =>
     options.AssumeDefaultVersionWhenUnspecified = true;
     options.DefaultApiVersion = new ApiVersion(1, 0);
     options.ReportApiVersions = true;
-    options.ApiVersionReader = new HeaderApiVersionReader("X-Api-Version");
+    options.ApiVersionReader = new MediaTypeApiVersionReader("v");
 });
 
 var app = builder.Build();
@@ -34,7 +35,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI(options => 
+    app.UseSwaggerUI(options =>
     {
         var provider = app.Services.GetService<IApiVersionDescriptionProvider>();
         ConfigureSwaggerOptions.ConfigureSwaggerUI(options, provider);

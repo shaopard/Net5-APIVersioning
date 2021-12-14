@@ -5,6 +5,7 @@ namespace _01.URIPath.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [ApiVersionNeutral]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]

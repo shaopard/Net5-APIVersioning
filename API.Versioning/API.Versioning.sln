@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.URIPath", "01.URIPath\01
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwaggerConfiguration", "SwaggerConfiguration\SwaggerConfiguration.csproj", "{611E2239-E6D5-4C2C-8CFE-56AB5ABEA194}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.CustomRequestHeaders", "02.CustomRequestHeaders\02.CustomRequestHeaders.csproj", "{0D386F52-2B70-40C4-B388-88D48C3077C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.CustomRequestHeaders", "02.CustomRequestHeaders\02.CustomRequestHeaders.csproj", "{0D386F52-2B70-40C4-B388-88D48C3077C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{D8211FF2-CDD4-4D40-B075-B664E4651FD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{D8211FF2-CDD4-4D40-B075-B664E4651FD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.MediaVersioningWithAcceptHeaders", "03.MediaVersioningWithAcceptHeaders\03.MediaVersioningWithAcceptHeaders.csproj", "{70907BD1-F02D-4ECC-968E-18336F5E0302}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D8211FF2-CDD4-4D40-B075-B664E4651FD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8211FF2-CDD4-4D40-B075-B664E4651FD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8211FF2-CDD4-4D40-B075-B664E4651FD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70907BD1-F02D-4ECC-968E-18336F5E0302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70907BD1-F02D-4ECC-968E-18336F5E0302}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70907BD1-F02D-4ECC-968E-18336F5E0302}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70907BD1-F02D-4ECC-968E-18336F5E0302}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

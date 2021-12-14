@@ -1,7 +1,6 @@
-using Common.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace _02.CustomRequestHeaders.Controllers
+namespace _03.MediaVersioningWithAcceptHeaders.Controllers
 {
     [ApiController]
     [Route("[controller]")]
